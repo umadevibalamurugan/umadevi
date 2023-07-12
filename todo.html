@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Rock+Salt|Raleway:500' rel='stylesheet' type='text/css'>
+
+    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+</head>
+<style>
+    body {
+        background-image: url('data:image/jpeg;base64,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');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: 100% 100%;
+    }
+
+    input[type:'text'] {
+        margin-bottom: 2em;
+    }
+
+    label {
+        margin-right: 1.5em;
+
+    }
+
+    .list-wrap {
+        margin-left: 25%;
+
+    }
+
+    li {
+
+        list-style-type: none;
+        margin: 5%;
+        font-family: "Raleway", sans-serif;
+        font-weight: bold;
+    }
+
+    .completed li {
+        text-decoration: line-through;
+
+    }
+
+
+
+    li.glyphicon {
+        color: white;
+
+    }
+
+    .btn-primary,
+    .btn-success,
+    .btn-danger {
+        margin-left: 2.5%;
+    }
+
+    .title,
+    h2 {
+        font-family: 'Rock Salt', cursive;
+        margin-bottom: 5%;
+    }
+
+
+    .list-inner-wrap div {
+        clear: both;
+        margin: -15px 25px;
+    }
+
+    label.radio-label {
+        width: 230px;
+        border-radius: 3px;
+        border: 1px solid #D1D3D4;
+    }
+
+    /* hide input */
+
+
+    input.radio:empty {
+        margin-left: -999px;
+    }
+
+    /* style label */
+
+
+    input.radio:empty~label {
+        position: relative;
+        float: left;
+        line-height: 2.5em;
+        text-indent: 3.25em;
+        margin: -20px 30px 1px 30px;
+        cursor: pointer;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+
+    input.radio:empty~label:before {
+        position: absolute;
+        display: block;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        content: '';
+        width: 2.5em;
+        background: #D1D3D4;
+        border-radius: 3px 0 0 3px;
+    }
+
+    /* toggle hover */
+
+
+    input.radio:hover:not(:checked)~label:before {
+        content: '\2714';
+        text-indent: .9em;
+        color: #C2C2C2;
+    }
+
+    input.radio:hover:not(:checked)~label {
+        color: #888;
+    }
+
+    /* toggle on */
+
+
+    input.radio:checked~label:before {
+        content: '\2714';
+        text-indent: .9em;
+        color: #9CE2AE;
+        background-color: #4DCB6D;
+    }
+
+    input.radio:checked~label {
+        color: #777;
+    }
+
+    /* radio focus */
+
+
+    input.radio:focus~label:before {
+        box-shadow: 0 0 0 3px #999;
+    }
+</style>
+
+<div class="list-wrap">
+    <div class="list-inner-wrap">
+        <h1 class="title">My Whiteboard</h1>
+        <h3 class="title">Add Task</h2>
+            <h4>Task Name</h4>
+
+            <input type="text" class="newTask" name="task-name" id="task-name" value="">
+
+            <button class="btn btn-primary">
+                <span class="glyphicon glyphicon-plus"> Add</span>
+            </button>
+            <h4>Date</h4>
+            <br>
+            <label for="task-date">Task Date</label><input type="text" class="task-date" name="task-date" id="task-date"
+                value="">
+            <br>
+            <br>
+            <br>
+
+
+            <div class="btn-group-lg" role="group" aria-label="...">
+                <button type="button" class="btn btn-primary importance"><span
+                        class="glyphicon glyphicon-exclamation-sign" value="important"></span> Important</button>
+                <button type="button" class="btn btn-primary importance" value="unimportant"> <span
+                        class="glyphicon glyphicon-minus-sign"></span> Unimportant</button>
+            </div>
+            <br>
+
+
+            <h3 class="title">To Do</h2>
+                <ul class="uncompleted">
+                    <li>Need to be completed task<button class="btn btn-success">
+                            <span class="glyphicon glyphicon-ok"> Done</span>
+                        </button></li>
+                </ul>
+
+                <h3 class="title">Completed Tasks</h2>
+                    <ul class="completed">
+                        <li>Completed Task<button class="btn btn-danger">
+                                <span class="glyphicon glyphicon-remove"> Remove</span>
+                            </button></li>
+                    </ul>
+    </div>
+</div>
+<script>
+    var $addButton = $(".btn-primary");
+    var $removeButton = $(".btn-danger");
+    var $todoList = $(".uncompleted");
+    var $doneList = $(".completed");
+
+
+    //Take Text Input and Add <li> to To Do List
+    $addButton.on("click", function () {
+
+        //Creating object Variables 
+        var $newTask = $(".newTask").val();
+        var $taskDate = $(".task-date").val();
+        var $importance = $("btn.importance").val();
+        var $newTaskString = $newTask + "  " + $taskDate + "  " + $importance;
+        var $todoList = $(".uncompleted");
+
+        //call append method on $todoList
+
+        $todoList.append("<li>" + $newTaskString + "<button><span> Done</span></button></li>").addClass("todo");
+
+        //add styles to button added to DOM by append  
+        var $span = $(".todo button span");
+        var $button = $(".todo button");
+        $button.addClass("btn btn-success");
+        $span.addClass("glyphicon glyphicon-ok");
+        $("input").val("");
+
+    })
+
+    //When Success button Clicked, remove task from to do list and append to completed tasks
+
+    var $doneButton = $(".btn-success");
+
+
+    $(".uncompleted").on("click", ".btn-success", function () {
+        var $completedTask = $(this).parent("li").text();
+        $(this).parent("li").remove();
+        $doneList.append("<li>" + $completedTask + "<button><span> Remove</span></button></li>").addClass("done");
+        $(".done button").addClass("btn btn-danger");
+        $(".done button span").addClass("glyphicon glyphicon-remove");
+
+    })
+
+
+    //Clear Completed Tasks 
+
+    $(".completed").on("click", '.btn-danger', function () {
+        $(this).parent("li").remove();
+
+    })
+
+
+
+
+</script>
+
+</html>
