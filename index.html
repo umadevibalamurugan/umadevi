@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+ 
+</head>
+<body>
+    <style>
+        body {
+  background: linear-gradient(135deg, #ff00d4 , #00ddff);
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  //text-align: center;
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 5px;
+  width: 400px;
+  background-color:white;
+}
+
+input {
+  width: 380px;
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+display:block;
+}
+
+button {
+  background-image: linear-gradient(to bottom right, pink, blue);
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-top:20px;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+    </style>
+  <div class="container">
+    <h2 style="text-align:center;">Login</h2>
+    <form onsubmit="return checkPassword()" id="loginForm">
+      <label for="username">Username:</label>
+      <input type="text" id="username" required>
+
+      <label for="password">Password:</label>
+      <input type="password" id="password" required>
+
+      <button type="submit">Login</button>
+    </form>
+  </div>
+  <script src="l1.js"></script>
+</body>
+</html>
